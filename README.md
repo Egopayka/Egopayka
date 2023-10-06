@@ -89,10 +89,11 @@ print(arr)
 
 
 
+import sys
 string = "ACbcCCHhha"
 unique_chars = []
 for char in string:
     if char not in unique_chars:
         unique_chars.append(char)
-unique_chars.sort(key=lambda x: x.lower())
+unique_chars.sort(key=lambda x: (x.lower() if x.islower() else sys.maxunicode + ord(x)))
 print(unique_chars)
