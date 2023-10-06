@@ -86,3 +86,13 @@ for i in range(len(arr)):
     if arr[i] < 15:
         arr[i] *= 2
 print(arr)
+
+
+
+string = "ACbcCCHhha"
+unique_chars = []
+for char in string:
+    if char not in unique_chars:
+        unique_chars.append(char)
+unique_chars.sort(key=lambda x: x.lower())
+print(unique_chars)
